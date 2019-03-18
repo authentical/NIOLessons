@@ -17,7 +17,10 @@ public class ThreadMaker {
         var pool = java.util.concurrent.Executors.newCachedThreadPool();
         while(true) {
             pool.submit(() -> {
-                System.out.println(num.incrementAndGet() + " threads submitted. " + (System.currentTimeMillis() - startTime) + "ms");
+                System.out.println(
+                                num.incrementAndGet() + " threads submitted. " +
+                                (System.currentTimeMillis() - startTime) + "ms"
+                );
                 Thread.sleep(10_000_000);
                 return null;
             });
