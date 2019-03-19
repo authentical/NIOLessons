@@ -1,9 +1,9 @@
-package NonBlocking.server;
+package Blocking.server;
 
-import NonBlocking.handler.ExecutorServiceHandler;
-import NonBlocking.handler.Handler;
-import NonBlocking.handler.PrintingHandler;
-import NonBlocking.handler.StreamHandler;
+import Blocking.handler.Handler;
+import Blocking.handler.PrintingHandler;
+import Blocking.handler.StreamHandler;
+import Blocking.handler.ExecutorServiceHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;
