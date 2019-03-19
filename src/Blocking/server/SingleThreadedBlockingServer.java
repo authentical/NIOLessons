@@ -1,8 +1,8 @@
-package demo.server;
+package Blocking.server;
 
-import demo.handler.ConnectionHandler;
-import demo.handler.Handler;
-import demo.handler.PrintingHandler;
+import Blocking.handler.StreamHandler;
+import Blocking.handler.Handler;
+import Blocking.handler.PrintingHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -13,8 +13,9 @@ public class SingleThreadedBlockingServer {
     public static void main(String[] args) throws IOException {
 
         ServerSocket serverSock = new ServerSocket(8010);
+
         Handler<Socket> handler = new PrintingHandler<>(
-                new ConnectionHandler()
+                new StreamHandler()
         );
 
 

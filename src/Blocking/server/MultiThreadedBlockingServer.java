@@ -1,12 +1,10 @@
-package demo.server;
+package Blocking.server;
 
-import demo.handler.*;
+import Blocking.handler.*;
 
 import java.io.IOException;
-import java.io.UncheckedIOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class MultiThreadedBlockingServer {
@@ -23,7 +21,7 @@ public class MultiThreadedBlockingServer {
         Handler<Socket> handler =
                 new ThreadedHandler<>(
                         new PrintingHandler<>(
-                                new ConnectionHandler()
+                                new StreamHandler()
                         )
                 );
 

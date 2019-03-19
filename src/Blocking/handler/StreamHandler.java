@@ -1,6 +1,6 @@
-package demo.handler;
+package Blocking.handler;
 
-import demo.util.Util;
+import Blocking.util.Util;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,12 +8,8 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 
-// I don't like the name of this class since it's
-// Handling a connection specifically in order to do 1 thing,
-// return text in a particular way but I can't figure out what
-// to call it
-
-public class ConnectionHandler implements Handler<Socket> {
+//Decorator for Stream data
+public class StreamHandler implements Handler<Socket> {
 
     // Take in text via telnet and echo to the same socket
     // with alpha capitalization flipped.

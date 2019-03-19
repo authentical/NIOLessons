@@ -1,4 +1,4 @@
-package demo.util;
+package NonBlocking.util;
 
 public class Util {
     public static int xorAlphas(int data) {

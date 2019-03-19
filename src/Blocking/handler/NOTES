@@ -1,0 +1,12 @@
+
+
+StreamHandler only does one thing... manage the in/out streams but
+
+I think it's a mistake calling the next encapsulating
+decorator PrintingHandler because it's duty is to Print around the
+StreamHandler and socket connection info.
+Why not ConnectionInformationHandler? This breaks a rule though since
+PrintingHandler can call any handleable Handler with <S>
+
+
+
